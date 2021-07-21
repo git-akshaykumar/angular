@@ -1,0 +1,7 @@
+<div class="container">
+  <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+    name: <my-input formControlName="name"></my-input> <br>
+    password: <my-input type="text" formControlName="password"></my-input> <br>
+    <input type="submit">
+  </form>
+</div>
