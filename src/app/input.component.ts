@@ -1,4 +1,3 @@
-import { isDefined } from '@angular/compiler/src/util';
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -28,12 +27,12 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => HelloComponent),
+      useExisting: forwardRef(() => MyComponent),
       multi: true
     }
   ]
 })
-export class HelloComponent implements ControlValueAccessor {
+export class MyComponent implements ControlValueAccessor {
   @Input() disabled: boolean;
 
   public value: string;

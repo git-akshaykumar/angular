@@ -8,14 +8,11 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AppComponent {
   myform = new FormGroup({
-    name: new FormControl({value:'',disabled:true}),
-    password: new FormControl({value:'',disabled:true})
+    name: new FormControl(''),
+    password: new FormControl('')
   });
 
   onSubmit() {
     console.log('hello', this.myform.value);
   }
-
-
-  
 }
